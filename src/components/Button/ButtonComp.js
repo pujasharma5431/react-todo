@@ -1,27 +1,38 @@
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import {Button} from "@material-ui/core";
+import * as PropTypes from "prop-types";
 
-const ButtonComp = () => {
+const ButtonComp = ({color, text, endIcon,click}) => {
+
     return (
-
-        <div className="btn">
+        <>
             <Button
+                onClick={click}
                 style={{
-                    color: "white",
-                    fontSize: "18px"
+                backgroundColor: color
+            }}
+                  endIcon={endIcon}
 
 
-                }}
+                    className='btn'>
 
-                endIcon={<AddCircleOutlineIcon/>}
-                variant="text"
-            >ADD
+
+                {text}
 
             </Button>
-        </div>
 
-
+        </>
     )
-};
+}
+ButtonComp.defaultProps={
+    color:"#c2185b",
+    endIcon:<AddCircleOutlineIcon/>
+}
+
+ButtonComp.prototype={
+    text:PropTypes.string,
+    color: PropTypes.string,
+    onClick:PropTypes.func,
+}
 
 export default ButtonComp;

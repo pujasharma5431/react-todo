@@ -24,7 +24,7 @@
 .btn {
     background-color: #c2185b;
     color: aliceblue;
-    border-radius: 20px;
-    padding: 0.5px;
+    border-radius: 5px;
+    padding: 8px;
     align-content: center;
 }
