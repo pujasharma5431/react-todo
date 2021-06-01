@@ -1,23 +1,16 @@
-
 import React from "react";
-import './App.css';
-import NavComp from './components/NavigationComp/navigationcomp';
-import Todos from './components/Todos/Todos';
-import TodoItem from './components/TodoItem/Todoitem';
-import  Footer from './components/Footer/Footer';
+import Header from "./components/Header/Header";
 
 
 function App() {
-    return (
-        <div className="App">
-           < NavComp title="My Todo list" pricing={true}/>
-           <Todos/>
-           <TodoItem/>
-           <Footer/>
 
+    return (
+        <div className='container'>
+            <Header/>
 
         </div>
-    );
+    )
 }
+
 
 export default App;
