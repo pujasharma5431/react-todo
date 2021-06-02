@@ -28,12 +28,36 @@
 /*    padding: 8px;*/
 /*    align-content: center;*/
 /*}*/
-.task{
+.task {
     border: 2px solid aliceblue;
     justify-content: space-between;
     margin: 30px;
     padding: 18px;
     overflow: auto;
+    cursor: pointer;
+}
+.task.reminder {
+    border-left: 5px solid #e91e63;
+}
 
+.add-form {
+    margin-bottom: 9px;
+}
+.form-control {
+    margin: 20px ;
+    padding: 20px;
 
 }
+/*.form-control label {*/
+/*    display: block;*/
+/*    margin-bottom: 200px;*/
+/*}*/
+
+   .form-control input {
+       width: 100%;
+
+       margin-bottom: 200px;
+       padding: 3px ;
+       font-size: 17px;
+   }
+
