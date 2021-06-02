@@ -25,7 +25,7 @@ const ButtonComp = ({color, text, endIcon,click}) => {
     )
 }
 ButtonComp.defaultProps={
-    color:"#c2185b",
+    color:"rgb(175,175,175)",
     endIcon:<AddCircleOutlineIcon/>
 }
 

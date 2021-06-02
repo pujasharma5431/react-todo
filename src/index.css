@@ -7,7 +7,7 @@
 }
 
 .container {
-    background-color: black;
+    background-color: #08102b;
     color: aliceblue;
 
     align-content: center;
@@ -21,10 +21,19 @@
 
 }
 
-.btn {
-    background-color: #c2185b;
-    color: aliceblue;
-    border-radius: 5px;
-    padding: 8px;
-    align-content: center;
+/*.btn {*/
+/*    background-color: rgb(175,175,175);*/
+/*    !*color: aliceblue;*!*/
+/*    border-radius: 5px;*/
+/*    padding: 8px;*/
+/*    align-content: center;*/
+/*}*/
+.task{
+    border: 2px solid aliceblue;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 18px;
+    overflow: auto;
+
+
 }
