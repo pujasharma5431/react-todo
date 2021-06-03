@@ -3,10 +3,9 @@ import Header from "./components/Header/Header";
 import Tasks from "./components/Task/Tasks";
 import AddTask from "./components/Form/AddTask";
 
-// import DarkTheme from "./components/Theme/Theme";
-
 
 function App() {
+    const [showAddTask, setShowAddTask] = useState(true)
     const [tasks, setTasks] = useState(
         [
             {
@@ -35,23 +34,38 @@ function App() {
             },
         ]
     )
+    //Add Task
+    const addTask = (task) => {
+        const sn = Math.floor(Math.random() * 10000) + 1
+        const newTask = {sn, ...task}
+        setTasks([...tasks, newTask])
+    }
+
+
     //Delete Task
     const deleteTask = (sn) => {
         setTasks(tasks.filter((task) => task.sn !== sn))
+
+
     }
 
     //Toggle Remainder
     const toggleRemainder = (sn) => {
-       setTasks(tasks.map((task)=>task.sn===sn?{...task,reminder:
-               !task.reminder}:task))
+        setTasks(tasks.map((task) => task.sn === sn ? {
+            ...task, reminder:
+                !task.reminder
+        } : task))
     }
 
 
     return (
         <div className='container'>
-            <Header/>
-            <AddTask/>
-            {/*<DarkTheme/>*/}
+            <Header
+                onAdd={() => setShowAddTask
+                (!showAddTask)}
+            showAdd={showAddTask} />
+            {showAddTask && <AddTask onAdd={addTask}/>}
+
             {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleRemainder}/>) :
                 (
                     'No Tasks To Show'
@@ -64,4 +78,4 @@ function App() {
 }
 
 
-export default App;
+export default App

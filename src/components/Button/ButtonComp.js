@@ -2,12 +2,12 @@ import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import {Button} from "@material-ui/core";
 import * as PropTypes from "prop-types";
 
-const ButtonComp = ({color, text, endIcon,click}) => {
+const ButtonComp = ({color, text, endIcon,onClick}) => {
 
     return (
         <>
             <Button
-                onClick={click}
+                onClick={onClick}
                 style={{
                 backgroundColor: color
             }}

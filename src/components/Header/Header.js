@@ -2,18 +2,17 @@ import PropTypes from 'prop-types'
 import ButtonComp from "../Button/ButtonComp";
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
-const Header = ({title}) => {
-    const onClick = () => {
-        console.log('clicked')
-
-    }
+const Header = ({title,onAdd,showAdd}) => {
 
 
     return (
 
         <header className="header">
             <h1>{title}</h1>
-            <ButtonComp color="rgb(175,175,175)" text="Add" click={onClick} endIcon={<AddCircleOutlineIcon/>}/>
+            <ButtonComp color={showAdd ? '#2e7d32':'#c2185b'}
+                        text={ showAdd ?'Close':'Add'}
+                        onClick={onAdd}
+                        endIcon={<AddCircleOutlineIcon/>}/>
         </header>
 
     )
@@ -29,4 +28,4 @@ Header.prototype = {
 }
 
 
-export default Header;
+export default Header
